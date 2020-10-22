@@ -1,0 +1,16 @@
+<title>Projeto Data</title>
+<h1>Bem vindo ao sistema</h1>
+
+<form>
+  <label>Titulo da Tarefa <br /></label>
+  <input type="text" placeholder="titulo da tarefa" name="titulo" [(ngModel)]="tarefa.titulo" />
+
+  <br />Nome<br />
+  <input type="text" placeholder="nome da Pessoa" name="nome" id="nome" [(ngModel)]="tarefa.nome" />
+  <button (click)="gravar();">Gravar</button>
+</form>
+
+Lista de Tarefas: <br>
+<li *ngFor="let item of tarefas">
+  {{item.titulo}}, {{item.nome}}
+</li>
